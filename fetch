@@ -1,0 +1,9 @@
+#!/bin/bash
+
+REGISTRY=10.6.199.182:5000
+
+echo "==> fetching $1"
+
+docker pull $REGISTRY/$1
+
+docker tag -f $REGISTRY/$1 $1
